@@ -27,7 +27,7 @@ const siteProps = {
   name: "Simar Singh",
   title: "Front End Developer",
   email: "ssimarsingh7@gmail.com",
-  gitHub: "microshttps://github.com/Simar012oft",
+  gitHub: "https://github.com/Simar012",
   linkedIn: "https://www.linkedin.com/in/simar-singh-78670b22a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   medium: "",
 };
