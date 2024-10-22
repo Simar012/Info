@@ -1,90 +1,86 @@
 /**
- * About component
+ * Portfolio component
  *
- * Space for you to describe more about yourself.
+ * Highlights some of  your creations. These can be designs, websites,
+ * open source contributions, articles you've written and more.
+ *
+ * This is a great area for you to to continually add to and refine
+ * as you continue to learn and create.
  */
 
 import React from "react";
 
 /**
- * About background image
+ * Desk image
  *
- * Below is a sample image. Upload the image of your choice into the "images"
- * directory and import here for use. Then, set imageAltText to string that 
- * represents what you see in that image.
+ * Below is a sample desk image. Feel free to update this to an image of your choice,
+ * updating below imageAltText to string that represents what you see in that image.
  *
- * Need an image? Check out https://unsplash.com to download a image you
+ * Need an image? Check out https://unsplash.com to download a photo you
  * freely use on your site.
  */
-import image from "../images/bg.jpg";
+import image from "../images/cloudy4.jpg";
 
-const imageAltText = "purple and blue abstract background";
-
-/**
- * Sort description that expands on your title on the Home component.
- */
-const description =
-  "I am a B.Tech 4th year student pursuing CSE from IPU at Delhi. Currently I am finding an internship as well as full time job.";
+const imageAltText = "Cloud Image";
 
 /**
- * List of some of skills or technologies you work on, are learning,
- * passionate about, or enjoy,
+ * Project list
+ *
+ * An array of objects that will be used to display for your project
+ * links section. Below is a sample, update to reflect links you'd like to highlight.
  */
-const skillsList = [
-  "HTML",
-  "CSS",
-  "Bootstrap",
-  "Java Script",
-  "Little React",
-  "C",
-  "C++",
-  "DSA",
-  "My SQL",
-  "DBMS",
+const projectList = [
+  {
+    title: "Education Landing Page",
+    description:
+      "The Educational Landing Page project is a responsive website designed to showcase an educational platform or service. It features a modern and clean layout with sections highlighting course offerings, features, testimonials, and a contact form. The page is visually appealing with smooth transitions and user-friendly navigation, making it ideal for promoting educational content or institutions.",
+    url: "https://simar012.github.io/Educational-landing-page/",
+  },
+  {
+    title: "Electronic E-commerce website",
+    description:
+      "The Electronic E-commerce project is a responsive website built for an online electronics store. It offers a sleek and modern design with sections for featured products, categories, customer testimonials, and promotional banners. The site includes easy navigation, product displays, and an integrated shopping cart for a smooth user experience.",
+    url: "https://simar012.github.io/Electronic-E-commerce/",
+  },
+  {
+    title: "Shopping-Website",
+    description:
+      "The Shopping Website project is a responsive e-commerce platform designed to provide a seamless shopping experience. It features a clean, user-friendly layout with sections showcasing product categories, featured items, and special offers. The website includes smooth navigation, product details, and a shopping cart functionality that allows users to easily add and manage items.",
+    url: "https://simar012.github.io/Shopping-Website/",
+  },
+  {
+    title: "Training cum internship",
+    description:
+      "I have done a training cum internship from yhills. It was of 2 months, mainly focusing on technologies that are used in front end development.",
+    url: "https://drive.google.com/drive/folders/1QJiNqOUrf9HU6tT60pLNgD01Vn-sVrN5",
+  },
 ];
 
-/**
- * Use this to give more information about what you are passionate about,
- * how you best work, or even a quote. This will help someone learn more
- * about you on a professional level.
- */
-const detailOrQuote =
-  "I have an interest in web development, I have also done a training cum internship in web development(front end) from yhills. I am upscaling my skills in it as well as practicing DSA C++for my placements";
-
-const About = () => {
+const Portfolio = () => {
   return (
-    <section className="padding" id="about">
-      <img className="background" src={image} alt={imageAltText} />
-      <div
-        style={{
-          backgroundColor: "white",
-          width: "50%",
-          padding: "4rem",
-          margin: "3rem auto",
-          textAlign: "center",
-        }}
-      >
-        <h2>About Myself</h2>
-        <p className="large">{description}</p>
-        <hr />
-        <ul
-          style={{
-            textAlign: "left",
-            columns: 2,
-            fontSize: "1.25rem",
-            margin: "2rem 3rem",
-            gap: "3rem",
-          }}
-        >
-          {skillsList.map((skill) => (
-            <li key={skill}>{skill}</li>
+    <section className="padding" id="portfolio">
+      <h2 style={{ textAlign: "center" }}>Portfolio</h2>
+      <div style={{ display: "flex", flexDirection: "row", paddingTop: "3rem" }}>
+        <div style={{ maxWidth: "40%", alignSelf: "center" }}>
+          <img
+            src={image}
+            style={{ height: "90%", width: "100%", objectFit: "cover" }}
+            alt={imageAltText}
+          />
+        </div>
+        <div className="container">
+          {projectList.map((project) => (
+            <div className="box" key={project.title}>
+              <a href={project.url} target="_blank" rel="noopener noreferrer">
+                <h3 style={{ flexBasis: "40px" }}>{project.title}</h3>
+              </a>
+              <p className="small">{project.description}</p>
+            </div>
           ))}
-        </ul>
-        <hr />
-        <p style={{ padding: "1rem 3rem 0" }}>{detailOrQuote}</p>
+        </div>
       </div>
     </section>
   );
 };
 
-export default About;
+export default Portfolio;
