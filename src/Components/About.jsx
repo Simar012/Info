@@ -16,7 +16,7 @@ import React from "react";
  * Need an image? Check out https://unsplash.com to download a image you
  * freely use on your site.
  */
-import image from "../images/pic.jpg";
+import image from "../images/bg.jpg";
 
 const imageAltText = "purple and blue abstract background";
 
@@ -24,7 +24,7 @@ const imageAltText = "purple and blue abstract background";
  * Sort description that expands on your title on the Home component.
  */
 const description =
-  "I am a B.Tech student pursuing CSE from IPU at Delhi.";
+  "I am a B.Tech 4th year student pursuing CSE from IPU at Delhi. Currently I am finding an internship as well as full time job.";
 
 /**
  * List of some of skills or technologies you work on, are learning,
@@ -33,11 +33,14 @@ const description =
 const skillsList = [
   "HTML",
   "CSS",
+  "Bootstrap",
   "Java Script",
   "Little React",
+  "C",
   "C++",
   "DSA",
   "My SQL",
+  "DBMS",
 ];
 
 /**
@@ -46,7 +49,7 @@ const skillsList = [
  * about you on a professional level.
  */
 const detailOrQuote =
-  "I have an interest in web development. I am upscaling my skills in it as well as practicing DSA C++for my placements";
+  "I have an interest in web development, I have also done a training cum internship in web development(front end) from yhills. I am upscaling my skills in it as well as practicing DSA C++for my placements";
 
 const About = () => {
   return (
